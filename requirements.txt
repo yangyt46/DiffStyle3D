@@ -1,7 +1,14 @@
+# Recommended environment:
+#   Python 3.10
+#   NVIDIA GPU + recent NVIDIA driver
+#   CUDA runtime wheel: cu121
+#
+# Install:
+#   pip install -r requirements.txt
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+
 # Core deep learning stack
-# For CUDA wheels, install torch/torchvision from the official PyTorch index
-# matching your local CUDA version, e.g.:
-#   pip install torch==2.1.0+cu121 torchvision==0.16.0+cu121 --index-url https://download.pytorch.org/whl/cu121
 torch==2.1.0+cu121
 torchvision==0.16.0+cu121
 xformers==0.0.22.post7
@@ -24,12 +31,13 @@ pillow==10.4.0
 plyfile==1.0.3
 tqdm==4.67.1
 
-# Optional logging used by train_style.py when available
+# Optional logging used by train_style.py
 tensorboard==2.18.0
 
-# Required 3DGS CUDA extensions. Install these from the Gaussian Splatting
-# submodules in your local checkout; the old absolute /nfsshare paths were
-# environment-specific and intentionally removed.
-# diff_gaussian_rasterization
-# fused_ssim
-# simple_knn
+# Local CUDA extensions.
+# These cannot be installed from PyPI unless your repo includes them as local submodules.
+# If your project has these folders, uncomment the relative paths below:
+#
+# ./submodules/diff-gaussian-rasterization
+# ./submodules/fused-ssim
+# ./submodules/simple-knn

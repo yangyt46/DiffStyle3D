@@ -12,4 +12,5 @@ python train_style.py --source_path "/path/truck"  \
                   --content_weight 0.1 \
                   --set_timestep 0 \
                   --style_image_path  "style_image/1.png" \
+                  --sd_model_key "stable-diffusion-v1-5/stable-diffusion-v1-5" \
                   --iterations 600 --resolution 1

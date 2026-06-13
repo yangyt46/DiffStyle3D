@@ -1,0 +1,15 @@
+python train_style.py --source_path "/path/truck"  \
+                  --model_path "output_dir" \
+                  --max_iteration 600 \
+                  --start_checkpoint "/path/model_truck/chkpnt30000.pth" \
+                  --port 6431 \
+                  --start_reset_iter 0 \
+                  --end_reset_iter 300 \
+                  --feature_lr 0.02 \
+                  --batch_size 4 \
+                  --start_layer 0 \
+                  --end_layer 16 \
+                  --content_weight 0.1 \
+                  --set_timestep 0 \
+                  --style_image_path  "style_image/1.png" \
+                  --iterations 600 --resolution 1
